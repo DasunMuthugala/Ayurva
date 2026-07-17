@@ -1,0 +1,6 @@
+{
+  "name": "Ayurva Yoga Student Management",
+  "description": "A wellness-inspired student management system for class schedules, attendance tracking, medical history, membership records, and AI-powered health recommendations.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

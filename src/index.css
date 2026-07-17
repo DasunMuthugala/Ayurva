@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark-mode-disabled));
+
+@theme {
+  --color-brand-primary: #0D4F51;
+  --color-brand-secondary: #206E72;
+  --color-brand-bg: #FAF9F6;
+  --color-brand-accent: #D4AF37;
+  
+  --color-brand-dark-bg: #FAF9F6;
+  --color-brand-dark-card: #FFFFFF;
+  --color-brand-dark-text: #0D4F51;
+
+  --color-stone-950: #052122;
+  --color-stone-900: #0D4F51;
+  --color-stone-800: #145C5F;
+  --color-stone-700: #1C6B6F;
+  --color-stone-600: #257C80;
+  --color-stone-500: #2E8E92;
+  --color-stone-400: #4B9FA3;
+  --color-stone-300: #B1D4D6;
+  --color-stone-200: #D6E8E9;
+  --color-stone-100: #EAF3F3;
+  --color-stone-50: #FAF9F6;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-stone-900 antialiased transition-colors duration-300;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  
+  body.dark {
+    @apply bg-brand-dark-bg text-brand-dark-text;
+  }
+}
+
+/* Custom Scrollbar for elegant aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #0D4F5180;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0D4F51;
+}
